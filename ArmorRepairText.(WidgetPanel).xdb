@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WidgetPanel>
+	<Name>ArmorRepairText</Name>
+	<Children>
+		<Item href="RepairText.(WidgetTextView).xdb" />
+	</Children>
+	<Placement>
+		<X>
+			<Align>WIDGET_ALIGN_CENTER</Align>
+			<Sizing>WIDGET_SIZING_DEFAULT</Sizing>
+			<Size>1000</Size>
+		</X>
+		<Y>
+			<Sizing>WIDGET_SIZING_DEFAULT</Sizing>
+			<Pos>250</Pos>
+			<Size>160</Size>
+		</Y>
+	</Placement>
+	<Visible>false</Visible>
+	<TransparentInput>true</TransparentInput>
+</WidgetPanel>
