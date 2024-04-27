@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetTextView>
 	<Name>RepairText</Name>
+	<Priority>4</Priority>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_CENTER</Align>
@@ -13,6 +14,13 @@
 			<Size>250</Size>
 		</Y>
 	</Placement>
+	<Visible>true</Visible>
 	<TransparentInput>true</TransparentInput>
+	<PickChildrenOnly>false</PickChildrenOnly>
 	<FormatFileRef href="RepairText.txt" />
+	<TextValues>
+		<Item>
+			<TagValueFileRef href="Text.txt" />
+		</Item>
+	</TextValues>
 </WidgetTextView>

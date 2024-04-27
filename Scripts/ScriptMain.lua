@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 -- INITIALIZATION
 --------------------------------------------------------------------------------
-local Armor = userMods.ToWString 'Ã€Ã¤Ã Ã¯Ã²Ã¨Ã¢Ã­Ã Ã¿ Ã¡Ã°Ã®Ã­Ã¿'
+local Armor = userMods.ToWString 'Àäàïòèâíàÿ áðîíÿ'
 local wtChat
 local valuedText = common.CreateValuedText()
 local addonName = common.GetAddonName()
@@ -41,18 +41,19 @@ function MountRide(p)
                 if mountInfo then
                     if  Armor == mountInfo.name then
                         if mountInfo.currentLevelStats.health/2 > p.health then
-                            LogToChat('Ã²Ã®Ã·ÃªÃ  Ã®Ã¤Ã¨Ã­')
+                            LogToChat('çåð ãóä­')
                         end
                     end
                 end
         end
     end
 end
-1245675865679679
+
 function Init()
     mainForm:Show(true)
     common.RegisterEventHandler(MountRide, 'EVENT_UNIT_MOUNT_HEALTH_CHANGED')
     ArmoreText:Show(true)
+    ArmoreRepaireText:Show(true)
 end
 --------------------------------------------------------------------------------
 --common.RegisterEventHandler(Init, "EVENT_AVATAR_CREATED")

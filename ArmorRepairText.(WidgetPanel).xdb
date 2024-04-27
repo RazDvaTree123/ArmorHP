@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WidgetPanel>
 	<Name>ArmorRepairText</Name>
+	<Priority>5</Priority>
 	<Children>
 		<Item href="RepairText.(WidgetTextView).xdb" />
 	</Children>
@@ -16,6 +17,7 @@
 			<Size>160</Size>
 		</Y>
 	</Placement>
-	<Visible>false</Visible>
+	<Visible>true</Visible>
 	<TransparentInput>true</TransparentInput>
+	<PickChildrenOnly>false</PickChildrenOnly>
 </WidgetPanel>
