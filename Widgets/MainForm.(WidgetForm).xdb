@@ -2,6 +2,9 @@
 <WidgetForm>
 	<Name>ArmorHP</Name>
 	<Priority>4000</Priority>
+	<Children>
+		<Item href="../ArmorRepairText.(WidgetPanel).xdb" />
+	</Children>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_BOTH</Align>
