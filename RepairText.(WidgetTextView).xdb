@@ -6,21 +6,17 @@
 		<X>
 			<Align>WIDGET_ALIGN_CENTER</Align>
 			<Sizing>WIDGET_SIZING_INTERNAL</Sizing>
+			<Pos>0</Pos>
 			<Size>1000</Size>
 		</X>
 		<Y>
 			<Align>WIDGET_ALIGN_LOW</Align>
 			<Sizing>WIDGET_SIZING_INTERNAL</Sizing>
+			<Pos>200</Pos>
 			<Size>250</Size>
 		</Y>
 	</Placement>
-	<Visible>true</Visible>
+	<Visible>false</Visible>
 	<TransparentInput>true</TransparentInput>
-	<PickChildrenOnly>false</PickChildrenOnly>
 	<FormatFileRef href="RepairText.txt" />
-	<TextValues>
-		<Item>
-			<TagValueFileRef href="Text.txt" />
-		</Item>
-	</TextValues>
 </WidgetTextView>

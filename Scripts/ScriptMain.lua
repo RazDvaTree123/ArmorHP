@@ -5,8 +5,9 @@ local Armor = userMods.ToWString 'Адаптивная броня'
 local wtChat
 local valuedText = common.CreateValuedText()
 local addonName = common.GetAddonName()
-local ArmoreRepaireText = mainForm:GetChildUnchecked("ArmorRepairText", false)
-local ArmoreText = ArmoreRepaireText:GetChildUnchecked("RepairText", false)
+local ArmoreRepaireText
+local ArmoreRepaireText = mainForm:GetChildUnchecked("RepairText", false)
+
 local function LogToChat(text)
   if not wtChat then
       wtChat = stateMainForm:GetChildUnchecked("ChatLog", false)
@@ -27,11 +28,6 @@ local function LogToChat(text)
       wtChat:PushFrontValuedText(valuedText)
   end
 end
-function ArmorCurrentHP(t)
-    if t.unitId == avatar.GetId() then
-    LogToChat('ГІГ®Г·ГЄГ  Г¤ГўГ ')
-    end
-end
 
 function MountRide(p)
     if p.unitId == avatar.GetId() then
@@ -41,7 +37,10 @@ function MountRide(p)
                 if mountInfo then
                     if  Armor == mountInfo.name then
                         if mountInfo.currentLevelStats.health/2 > p.health then
-                            LogToChat('зер гуд­')
+                          ArmoreRepaireText:Show(true)
+                        end
+                        if mountInfo.currentLevelStats.health/2 < p.health then
+                          ArmoreRepaireText:Show(false)
                         end
                     end
                 end
@@ -49,14 +48,15 @@ function MountRide(p)
     end
 end
 
+function Mount(s)
+  ArmoreRepaireText:Show(false)
+end
 function Init()
     mainForm:Show(true)
     common.RegisterEventHandler(MountRide, 'EVENT_UNIT_MOUNT_HEALTH_CHANGED')
-    ArmoreText:Show(true)
-    ArmoreRepaireText:Show(true)
+    common.RegisterEventHandler(Mount, 'EVENT_ACTIVE_MOUNT_CHANGED')
 end
 --------------------------------------------------------------------------------
---common.RegisterEventHandler(Init, "EVENT_AVATAR_CREATED")
 --------------------------------------------------------------------------------
 if avatar.IsExist() then
     Init()

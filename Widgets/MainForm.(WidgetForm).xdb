@@ -3,7 +3,7 @@
 	<Name>ArmorHP</Name>
 	<Priority>4000</Priority>
 	<Children>
-		<Item href="../ArmorRepairText.(WidgetPanel).xdb" />
+		<Item href="../RepairText.(WidgetTextView).xdb" />
 	</Children>
 	<Placement>
 		<X>

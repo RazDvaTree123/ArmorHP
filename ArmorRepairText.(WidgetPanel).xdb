@@ -2,9 +2,6 @@
 <WidgetPanel>
 	<Name>ArmorRepairText</Name>
 	<Priority>5</Priority>
-	<Children>
-		<Item href="RepairText.(WidgetTextView).xdb" />
-	</Children>
 	<Placement>
 		<X>
 			<Align>WIDGET_ALIGN_CENTER</Align>
