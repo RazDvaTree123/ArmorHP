@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 -- INITIALIZATION
 --------------------------------------------------------------------------------
-local Armor = userMods.ToWString 'Адаптивная броня'
+local Armor = userMods.ToWString 'ГЂГ¤Г ГЇГІГЁГўГ­Г Гї ГЎГ°Г®Г­Гї'
 local wtChat
 local valuedText = common.CreateValuedText()
 local addonName = common.GetAddonName()
@@ -29,7 +29,7 @@ local function LogToChat(text)
 end
 function ArmorCurrentHP(t)
     if t.unitId == avatar.GetId() then
-    LogToChat('точка два')
+    LogToChat('ГІГ®Г·ГЄГ  Г¤ГўГ ')
     end
 end
 
@@ -41,15 +41,14 @@ function MountRide(p)
                 if mountInfo then
                     if  Armor == mountInfo.name then
                         if mountInfo.currentLevelStats.health/2 > p.health then
-                            LogToChat('точка один')
+                            LogToChat('ГІГ®Г·ГЄГ  Г®Г¤ГЁГ­')
                         end
                     end
                 end
         end
     end
 end
-2341241241241234
-123124512412
+1245675865679679
 function Init()
     mainForm:Show(true)
     common.RegisterEventHandler(MountRide, 'EVENT_UNIT_MOUNT_HEALTH_CHANGED')
